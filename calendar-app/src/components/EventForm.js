@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { EventContext } from '../context/EventContext';
 
+
 const EventForm = () => {
   const { addEvent, editEvent, events } = useContext(EventContext);
   const [event, setEvent] = useState({ id: '', title: '', date: '', category: '' });
@@ -30,7 +31,7 @@ const EventForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form  id='sk02' onSubmit={handleSubmit}>
       <input
         type="text"
         name="title"
