@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        li.completed {
+            text-decoration: line-through; /* Strikethrough effect for completed tasks */
+        }
+    </style>
+</head>
+   
+
+
+<body>
+    <div id="main-body">
+        <!--  HEADING-->
+        <div class="heading">
+            <span id="hed">T</span>
+            <span id="hed">O</span>
+            <span id="hed">-</span>
+            <span id="hed">D</span>
+            <span id="hed">O</span>
+            <span id="hed">'S</span>
+        </div>
+        <div id="input">
+            <input type="text" class="form-control" id="input-box" placeholder="Set The Goal">
+            <button onclick="addtask ()" id="enter">ADD</button>
+        </div>
+        <div id="list">
+            <ul id="tasks">
+               
+            </ul>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

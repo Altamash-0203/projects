@@ -1,0 +1,224 @@
+/*-------------------IMPORTS----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-body {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
+    width: 90vw; /* Adjusted for responsive design */
+    height: 80vh;
+    margin: 0 auto;
+
+   
+}
+
+/* Positioning the heading at the top */
+.heading {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+/* Each letter in the heading */
+.heading span {
+    font-size: calc(1em + 3vw); /* Font size based on viewport width */
+    display: inline-block;
+    padding: 0 calc(0.5rem + 0.5vw);
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: drop 0.5s ease forwards;
+}
+
+/* Adding animation delay to each letter */
+.heading span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.heading span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.heading span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.heading span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.heading span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+/* Continue for as many letters as needed */
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* INPUT Section */
+#input {
+   display: inline;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+#input input {
+    height: 8vh;
+    width: 50vw; /* Responsive button width */
+    background-color: rgb(39, 39, 39);
+    border-radius: 3vh;
+    color: white; /* Changed to white for consistency */
+    font-size: 4vh;
+    text-align: center;
+    margin-top: 10px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+#input button {
+    height: 8vh;
+    width: 10vw; /* Responsive button width */
+    background-color: rgb(39, 39, 39);
+    border-radius: 3vh;
+    color: rgb(0, 0, 0); /* Changed to white for consistency */
+    font-size: 4vh;
+    text-align: center;
+    margin-top: 10px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+/* Media Query for Smaller Devices */
+@media (max-width: 768px) {
+    #main-body {
+        width: 95vw;
+        height: 90vh;
+    }
+
+    #input input, #input button {
+        width: 90vw;
+        font-size: 3vh;
+    }
+
+    .heading span {
+        font-size: calc(1em + 5vw); /* Larger font size for smaller screens */
+    }
+}
+
+
+
+/*task list*/
+
+
+#list
+{
+    
+width: 60vw;
+text-align: center;
+}
+
+#tasks
+{
+    font-size: 2vw;
+}
+
+#tasks li 
+{
+    border: 1px solid ;
+    border-radius: 3vw;
+    margin: 1vw;
+    text-transform: capitalize;
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+ /* Style for completed tasks */
+ li.completed {
+    text-decoration: line-through;
+}
+
+/* Flexbox to align checkbox, task text, and delete button */
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    list-style-type: none; /* Removes default bullet points */
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Style for checkbox on the left side */
+.checkbox {
+    margin-right: 10px;
+    background-color: green;
+    width: 5vw;
+    height: 1.5vw;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+/* Align task text */
+span {
+  
+    flex-grow: 1; /* Allow task text to take available space */
+}
+
+/* Style for delete button */
+.delete-btn {
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Optional hover effect for delete button */
+li:hover .delete-btn {
+    background-color: darkred;
+}
+
+
+
+
+#hed {
+    background-color: aqua;
+    flex-grow: 1; /* Allow task text to take available space */
+}
